@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- <html lang="en"> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRP Home</title>
+    <link rel="stylesheet" th:href="@{/css/SRAP.css}" />
+
+</head>
+
+<body>
+    <div class="bgig"></div>
+
+    <header class="header-static">
+        <a href="..\home" class="header-box header-button header-box-main header-right">
+            <H1>SRP</H1>
+            <H1 style="font-Size: 23px;">Student Registration Portal</H1>
+        </a>
+        <a href="/" class="header-box header-button header-left">
+            <p style="font-size: 20px;">Logout</p>
+        </a>
+    </header>
+
+    <div class="body">
+        <div class="c-body">
+            <div class="graysc"></div>
+
+            <div class="c-logo">
+                <img th:src="@{/img/club_logo/{ccode}.jpeg(ccode=${club.ccode})}" alt="Club Image">
+            </div>
+
+            <div class="c-title" id="c-title">
+                <div>
+                    <a th:href="@{${club.clink}}" target="_blank">
+                        <h2 th:text="${club.ccode}">Club code</h2>
+                        <p th:text="${club.cname}">Club name</p>
+                    </a>
+                </div>
+                <a th:href="@{/register-clubs/{ccode}(ccode=${club.ccode})}">
+                    <p>Register</p>
+                </a>
+            </div>
+
+            <div class="c-box">
+                <p class="c-desc-heading"> About this Club </p>
+                <p class="c-desc-txt">
+                    <span th:text="${club.cdesc}"></span>
+                    <span>In this club, students have the opportunity to explore their interests beyond academics while
+                        developing both technical and soft skills, such as leadership, teamwork, and communication.
+                        Whether the focus is on coding, robotics, or entrepreneurship, members can deepen their
+                        knowledge in specialized fields while connecting with peers and industry professionals. The club
+                        fosters creativity, provides practical experience through projects and competitions, and
+                        enhances resumes, making members more attractive to employers. Overall, being part of this club
+                        helps students grow personally and professionally, enriching their college experience and
+                        preparing them for future career opportunities.</span>
+                </p>
+            </div>
+
+            <div class="c-box">
+                <p class="c-desc-heading"> Advantages of joining this club</p>
+                <p class="c-desc-txt">
+                    <span th:text="${club.cadvantages}"></span>
+                    <span> Joining a club in an engineering college offers numerous benefits that go beyond academics.
+                        First, it provides opportunities for personal and professional growth. Clubs often focus on
+                        specific interests, such as coding, robotics, or entrepreneurship, allowing students to deepen
+                        their knowledge and skills in these areas. Engaging in club activities also helps in developing
+                        essential soft skills like teamwork, leadership, communication, and time management, which are
+                        highly valued by employers.Additionally, clubs create a network of like-minded peers and
+                        mentors, fostering collaboration and exchange of ideas. These connections can lead to
+                        internships, job opportunities, or collaborative projects that enhance your academic
+                        experience.Participating in clubs also provides a break from the regular academic routine,
+                        offering a platform for creativity, innovation, and stress relief. Whether organizing events,
+                        participating in competitions, or contributing to community service, students gain hands-on
+                        experience and practical problem-solving skills that are crucial in engineering.Furthermore,
+                        clubs enhance a student's resume, showcasing initiative and engagement beyond the classroom,
+                        which can make a significant difference during job interviews or graduate school applications.
+                        Overall, joining a club enriches both personal development and career readiness, making it a
+                        valuable part of the engineering college experience.</span>
+                </p>
+            </div>
+
+            <div class="c-box">
+                <p class="c-desc-heading"> Opportunities this club provides </p>
+                <p class="c-desc-txt">
+                    <span th:text="${club.copportunities}"></span>
+                    <span>Joining this club opens the door to a wide range of opportunities that can significantly boost
+                        both personal and professional growth. It provides hands-on experiences beyond the classroom,
+                        allowing members to apply their theoretical knowledge to real-world challenges. By working on
+                        projects, participating in competitions, and collaborating with fellow members, students can
+                        sharpen their technical skills in areas like coding, robotics, electronics, or design. This
+                        practical exposure is crucial in today’s job market, where employers seek candidates with
+                        relevant experience in addition to academic qualifications.This club also offers valuable
+                        networking opportunities. Members have the chance to interact with alumni, industry
+                        professionals, and guest speakers through events, workshops, and seminars. These connections can
+                        lead to internships, mentorships, and even job offers. Networking within the club fosters
+                        collaboration with like-minded individuals, often resulting in joint projects, startups, or
+                        research opportunities.Additionally, being an active member or taking on leadership roles within
+                        the club helps to develop essential soft skills, such as leadership, communication, teamwork,
+                        and time management. These are critical in professional environments. Organizing events or
+                        leading club initiatives gives members practical experience in problem-solving and
+                        decision-making.The club also participates in national and international competitions, where
+                        students can showcase their talents and gain recognition. Winning or even taking part in these
+                        competitions enhances confidence and adds a significant achievement to one’s resume, making
+                        candidates stand out in the job market.Finally, the club helps members stay updated with the
+                        latest technologies and trends in their field. Through workshops and guest lectures, students
+                        gain insights into cutting-edge advancements, ensuring they are well-prepared for future career
+                        challenges. Overall, this club offers numerous opportunities that set the foundation for
+                        academic, professional, and personal success.</span>
+                </p>
+            </div>
+
+            <div class="c-box">
+                <p class="c-desc-heading"> club's Achievements </p>
+
+                <ul style="margin-left: 25px;">
+                    <li th:text="${achievement.cachiv1}">Achievement 1</li>
+                    <li th:text="${achievement.cachiv2}">Achievement 2</li>
+                    <li th:text="${achievement.cachiv3}">Achievement 3</li>
+                    <li th:text="${achievement.cachiv4}">Achievement 4</li>
+                </ul>
+
+            </div>
+
+            <div class="c-box">
+                <p class="c-desc-heading"> important members </p>
+                <div style="border: 1px solid white; border-radius: 10px; height: fit-content; width: fit-content;">
+                    <table class="c-roles-table">
+                        <tbody>
+                            <tr>
+                                <td>President</td>
+                                <td><span th:text="${role.crole1}"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Vice President</td>
+                                <td><span th:text="${role.crole2}"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Secretary</td>
+                                <td><span th:text="${role.crole3}"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Membership Coordinator</td>
+                                <td><span th:text="${role.crole4}"></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="c-box">
+                <p class="c-desc-txt">
+                    <strong> Officail Website: </strong>
+                    <a th:href="@{${club.clink}}" target="_blank">
+                        <span style="color: blueviolet;" th:text="${club.clink}"></span>
+                    </a>
+                </p>
+                <p class="c-desc-txt">
+                    <strong> Contact: </strong>
+                    <span th:text="${club.ccontact}"></span>
+                </p>
+            </div>
+
+        </div>
+        <div class="c-footer"></div>
+    </div>
+
+    <script>
+        const cTitle = document.getElementById('c-title');
+
+        const stickyOffset = cTitle.offsetTop + 126;
+
+        window.onscroll = function () {
+            makewide();
+        };
+
+        function makewide() {
+            if (window.pageYOffset >= stickyOffset) {
+                cTitle.classList.add('c-title-wide');
+            } else {
+                cTitle.classList.remove('c-title-wide');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

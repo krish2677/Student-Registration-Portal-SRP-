@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRP Login</title>
+    <link rel="stylesheet" th:href="@{/css/SRAP.css}" />
+
+</head>
+
+<body>
+    <div class="bgig"></div>
+    <header class="header-static">
+        <div class="header-box header-box-main header-right">
+            <H1>SRP</H1>
+            <H1 style="font-Size: 23px;">Student Registration Portal</H1>
+        </div>
+        <a th:href="@{/club/{ccode}(ccode = ${ccode})}" class="header-box header-button header-left">
+            Back
+        </a>
+    </header>
+    <div class="body">
+        <form class="register-cont" action="#" th:action="@{/register-clubs}" method="post">
+
+            <input type="hidden" name="ccode" th:value="${ccode}" />
+
+            <p class="c-desc-heading"> You are Registering into <span th:text="${ccode}">Club name</span></p>
+
+            <label for="role">Which Role do You want to Apply for? </label>
+
+            <select id="role" name="role" required>
+                <option style="color: gray;" value="" selected disabled> Role </option>
+                <option th:each="role : ${roles}" th:value="${role}" th:text="${role}"></option>
+            </select>
+
+            <label for="email"> User Authentication: </label>
+
+            <input placeholder="Email" type="email" name="email" id="email" required>
+            <input placeholder="Password" type="password" name="password" id="password" required>
+
+
+            <button class="login-button" type="submit">Submit</button>
+
+            <!-- Error message -->
+            <p th:if="${error}" th:text="${error}" style="color:red;"></p>
+
+            <!-- Success message and JavaScript redirect -->
+            <p th:if="${success}" th:text="${success}" style="color:green;"></p>
+            <script th:if="${success}">
+                setTimeout(function () {
+                    window.location.href = "/home"; // Redirect to home after 3 seconds
+                }, 3000);
+            </script>
+        </form>
+
+
+
+        <!-- <input placeholder="Name" aria-label="Year" type="text" name="" id="Name">
+            <select placeholder="Year"  type="" name="" id="Year">
+                <option style="color: gray;" value="" selected disabled>Year</option>
+                <option value="">FY</option>
+                <option value="">SY</option>
+                <option value="">TY</option>
+                <option value="">LY</option>
+            </select>
+            <select placeholder="Branch" type="" name="" id="Branch">
+                <option value="" style="color: gray;">Branch</option>
+                <option value="">I.T</option>
+                <option value="">C.S</option>
+                <option value="">A.I.D.S</option>
+                <option value="">E.X.T.C</option>
+            </select>
+            <select placeholder="Branch" type="" name="" id="Branch">
+                <option value="" style="color: gray;">Role</option>
+                <option value="">I.T</option>
+                <option value="">C.S</option>
+                <option value="">A.I.D.S</option>
+                <option value="">E.X.T.C</option>
+            </select>
+            <input placeholder="Divison" type="text" name="" id="Divison">
+            <button class="register-button">Register</button>   -->
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRP Login</title>
+    <link rel="stylesheet" href="css\SRAP.css">
+
+</head>
+
+<body>
+    <div class="bgig"></div>
+    <header class="header-static">
+        <div class="header-box header-box-main header-right">
+            <H1>SRP</H1>
+            <H1 style="font-Size: 23px;">Student Registration Portal</H1>
+        </div>
+        <a href="login" class="header-box header-button header-left">
+            Login
+        </a>
+    </header>
+    <div class="body">
+        <form class="register-cont" action="/auth/register" method="post">
+            <p>Create Account</p>
+            <input placeholder="Email" type="email" name="email" id="email" required>
+            <input placeholder="Password" type="password" name="password" id="password" required>
+            <p>Details</p>
+            <input placeholder="Name" type="text" name="name" id="name" required>
+
+            <select placeholder="Year" name="year" id="year" required>
+                <option style="color: gray;" value="" selected disabled>Year</option>
+                <option value="FY">FY</option>
+                <option value="SY">SY</option>
+                <option value="TY">TY</option>
+                <option value="LY">LY</option>
+            </select>
+
+            <select placeholder="Branch" name="branch" id="branch" required>
+                <option style="color: gray;" value="" selected disabled>Branch</option>
+                <option value="I.T">I.T</option>
+                <option value="C.S">C.S</option>
+                <option value="A.I.D.S">A.I.D.S</option>
+                <option value="E.X.T.C">E.X.T.C</option>
+            </select>
+
+            <input placeholder="Division" type="text" name="division" id="division" required>
+
+            <div style="display: flex;">
+                <input class="login-button" type="submit" value="Register">
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>
