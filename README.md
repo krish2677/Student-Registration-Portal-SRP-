@@ -6,7 +6,7 @@ The Student Registration Portal (SRP) is a web-based platform built using Spring
 
 🚀 Features
 
-📝 Student Registration: Sign up and manage student profiles.
+📝 Student Registration: Register or Sign in.
 
 🏫 Club Management: View available clubs and join them.
 
@@ -27,10 +27,6 @@ Bootstrap (for responsive UI)
 Backend
 
 Spring Boot (Java-based framework)
-
-Spring Security (for authentication)
-
-Spring Data JPA (for database operations)
 
 Database
 
