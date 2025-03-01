@@ -56,13 +56,13 @@ mvn spring-boot:run
 
 📷 Screenshots
 
-![LOGIN PAGE](images/1.png)
-![REGISTRATION PAGE](images/2.png)
-![HOME PAGE](images/3.png)
-![CLUB PAGE](images/4.png)
-![CLUB PAGE](images/5.png)
-![CLUB PAGE](images/6.png)
-![REGISTRATION FOR CLUB PAGE](images/7.png)
+![LOGIN PAGE](image/1.png)
+![REGISTRATION PAGE](image/2.png)
+![HOME PAGE](image/3.png)
+![CLUB PAGE](image/4.png)
+![CLUB PAGE](image/5.png)
+![CLUB PAGE](image/6.png)
+![REGISTRATION FOR CLUB PAGE](image/7.png)
 
 
 
