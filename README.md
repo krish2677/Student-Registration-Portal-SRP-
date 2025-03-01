@@ -56,7 +56,13 @@ mvn spring-boot:run
 
 📷 Screenshots
 
-![LOGIN PAGE](images/Screenshot 2025-03-01 121421.png)
+![LOGIN PAGE](images/1.png)
+![REGISTRATION PAGE](images/2.png)
+![HOME PAGE](images/3.png)
+![CLUB PAGE](images/4.png)
+![CLUB PAGE](images/5.png)
+![CLUB PAGE](images/6.png)
+![REGISTRATION FOR CLUB PAGE](images/7.png)
 
 
 
@@ -70,4 +76,5 @@ Feel free to contribute by opening issues and pull requests.
 
 This project is open-source and available under the MIT License.
 
-✨ Developed by Krish & Team 
+✨ Developed by Krish & Kishan
+
