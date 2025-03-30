@@ -22,8 +22,6 @@ Frontend
 
 HTML, CSS, JavaScript
 
-Bootstrap (for responsive UI)
-
 Backend
 
 Spring Boot (Java-based framework)
